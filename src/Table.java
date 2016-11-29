@@ -12,14 +12,6 @@ public class Table {
     private ResultSet resultSet = null;
     private boolean hasForeignKey = false;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setHasForeignKey(boolean hasForeignKey) {
-        this.hasForeignKey = hasForeignKey;
-    }
-
     public Table(ResultSet resultSet) {
         try {
             this.resultSet = resultSet;
@@ -51,6 +43,10 @@ public class Table {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void getForeignKeys(String tableName, Connection connection) {
@@ -107,5 +103,4 @@ public class Table {
     public ResultSet getElementResultSet() {
         return this.resultSet;
     }
-
 }

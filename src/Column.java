@@ -5,9 +5,6 @@ public class Column {
     private int ordinal = -1;
     private String name = "";
     private boolean hasForeignKey = false;
-
-
-
     private String foreignTableName = "";
     private String foreignColumnName = "";
     private boolean isInt = false;
@@ -38,7 +35,6 @@ public class Column {
     public String getForeignTableName() {
         return foreignTableName;
     }
-
 
     public int getOrdinal() {
 
